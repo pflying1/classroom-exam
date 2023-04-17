@@ -4,9 +4,7 @@ function examFive(array) {
     if (array.length === 0) {
       console.log("배열안이 비었음");
     } else {
-      let sumValue = array.reduce((count, arrAll) => {
-        return count + arrAll;
-      }, 0);
+      let sumValue = array.reduce((count, arrAll) => count + arrAll);
       return sumValue;
     }
   } else {
