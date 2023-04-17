@@ -7,7 +7,7 @@ function examThree(str) {
     }, 0);
     return array;
   } else {
-    console.log("문자열을 입력해주세요.");
+    console.log("문자열 아님");
   }
 }
 console.log(examThree("hello")); //Question 3 문자열 길이 구하기
