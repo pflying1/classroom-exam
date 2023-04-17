@@ -11,4 +11,5 @@ function examFive(array) {
     console.log("배열이 아닙니다.");
   }
 }
+
 console.log(examFive([1, 2, 3])); //Question 5 배열값 누산(총합)하기
