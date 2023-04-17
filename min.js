@@ -4,7 +4,7 @@ function examFour(array) {
     if (array.length === 0) {
       console.log("배열안이 비었음");
     } else {
-      const minValue = array.reduce((count, cur) => {
+      let minValue = array.reduce((count, cur) => {
         return Math.min(count, cur);
       }, 0);
       return minValue;

@@ -4,13 +4,13 @@ function examFive(array) {
     if (array.length === 0) {
       console.log("배열안이 비었음");
     } else {
-      const maxValue = array.reduce((count, cur) => {
-        return Math.max(count, cur);
+      let sumValue = array.reduce((count, arrAll) => {
+        return count + arrAll;
       }, 0);
-      return maxValue;
+      return sumValue;
     }
   } else {
     console.log("배열이 아닙니다.");
   }
 }
-console.log(examFive([1, 2, 3]));
+console.log(examFive([1, 2, 3])); //Question 5 배열값 누산(총합)하기
