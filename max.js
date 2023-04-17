@@ -4,10 +4,10 @@ function examFive(array) {
     if (array.length === 0) {
       console.log("배열안이 비었음");
     } else {
-      const minValue = array.reduce((count, cur) => {
+      const maxValue = array.reduce((count, cur) => {
         return Math.max(count, cur);
       }, 0);
-      return minValue;
+      return maxValue;
     }
   } else {
     console.log("배열이 아닙니다.");
