@@ -29,10 +29,26 @@ function filter(str) {
   //문자열만 실행되도록 타입을 확인하는 로직을 작성하시오
   //length 프로퍼티를 사용하지 않고 길이값을 구하시오.
   if (typeof str === "string") {
-    let array = str.split("").filter((count) => count === "l", 0);
+    let array = str.split("").filter((count) => {
+      return count === "l";
+    }, 0);
     return array;
   } else {
     console.log("문자열 아님");
   }
 }
 console.log(filter("hello"));
+
+function forEach(str) {
+  //문자열만 실행되도록 타입을 확인하는 로직을 작성하시오
+  //length 프로퍼티를 사용하지 않고 길이값을 구하시오.
+  if (typeof str === "string") {
+    let array = str.split("").forEach((arrAll) => {
+      return console.log(arrAll);
+    });
+    return array;
+  } else {
+    console.log("문자열 아님");
+  }
+}
+console.log(forEach("hello"));
