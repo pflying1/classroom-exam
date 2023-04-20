@@ -67,9 +67,9 @@ function exampleThree(array, functionOne, functionTwo) {
   //비교한 작은 값은 arrayResult의 원소배열의 0번째
   //큰 값은 arrayResult의 원소배열의 1번째에 넣어준다.
 
-  //한쌍이 아닌 한번에
-  // const sortAsc = array.sort((a, b) => a - b);
-  /* for (let i = 0; i < array.length; i += 2) {
+  //오름차순 정렬후 한쌍이 아닌 한번에 전부
+  /* const sortAsc = array.sort((a, b) => a - b);
+  for (let i = 0; i < array.length; i += 2) {
     arrayResult[i / 2] = [sortAsc[i], sortAsc[i + 1]];
   }*/
   for (let i = 0; i < array.length; i += 2) {
