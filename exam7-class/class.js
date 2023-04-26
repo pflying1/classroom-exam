@@ -33,12 +33,13 @@ function exampleOne(arr, dataType, itemToFind) {
 
 class ExampleTwo {
   constructor(arr, dataType, itemToFind) {
-    if (typeof itemToFind !== dataType || Array.isArray(arr)) {
+    if (typeof itemToFind !== dataType && Array.isArray(arr)) {
       throw new Error("데이터는 객체여야 합니다.");
     }
   }
 
-  set arr(arr) {}
+  set arr(arr) {
+  }
 
   set dataType(dataType) {}
 
