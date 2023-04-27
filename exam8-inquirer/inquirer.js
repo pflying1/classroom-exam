@@ -12,8 +12,24 @@ import inquirer from "inquirer";
 function exampleOne(array) {
   let suffledArray = [];
   // Q.1 랜덤으로 배열의 인덱스를 셔플(섞어) 내는 함수 로직을 작성하세요.
-  suffledArray = array.Math.random()
-  //단, 마지막 confirm은 항상 마지막 인덱스여야 합니다.
+
+  // 배열의 요소를 순서대로 새로운 배열에 추가합니다.
+  for (let i = 0; i < array.length; i++) {
+    suffledArray.push(array[i]);
+  }
+
+  // 배열의 인덱스를 랜덤하게 섞습니다.
+  for (let i = 0; i < suffledArray.length; i++) {
+    const random = Math.floor(Math.random() * suffledArray.length);
+    const index = suffledArray[i];
+    suffledArray[i] = suffledArray[random];
+    suffledArray[random] = index;
+  }
+
+  // 마지막 요소는 항상 마지막 인덱스여야 하므로, 그렇게 설정합니다.
+  // length 에 -1 을 하면 마지막꺼가 빠짐
+  suffledArray[array.length - 1] = array[array.length - 1];
+
   return suffledArray;
 }
 
@@ -21,7 +37,8 @@ function exampleOne(array) {
 //위의 작성한 exampleOne을 활용하여 입력 데이터를 실행할 때마다 섞어 출력하도록 하세요.
 //공부법으로 유명한 flash card의 주요 코어로직입니다.
 inquirer
-  .prompt([
+  .prompt(
+    exampleOne([
     {
       type: "input",
       name: "name",
@@ -38,7 +55,7 @@ inquirer
       name: "confirm",
       message: "확실합니까?",
     },
-  ])
+    ]))
   .then((answers) => {
     console.log("Answers:", answers);
   });

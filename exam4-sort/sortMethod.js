@@ -41,19 +41,20 @@ function exampleThree(array, functionOne, functionTwo) {
   //매개변수 array의 모든 원소는 숫자 정수여야 함
   //매개변수 array의 배열 길이(length)는 짝수여야 함, 홀수라면 10을 추가하여 짝수로 만듦
   if (typeof functionOne === "function" && typeof functionTwo === "function") {
-    array.forEach((array) => {
-      // typeof === "number"는 소수점도
-      //정수로 취급해서 Number.isInteger를 사용함
-      if (Number.isInteger(array)) {
-        console.log("정수 맞음");
-      } else {
-        console.log("정수가 아닙니다.");
-      }
-    });
+    console.log("함수가 맞습니다.")
   } else {
     console.log("타입이 함수가 아닙니다.");
   }
-
+  // typeof === "number"는 소수점도
+  //정수로 취급해서 Number.isInteger를 사용함
+  array.forEach((array) => {
+    if (Number.isInteger(array)) {
+      console.log("정수 입니다.");
+    } else {
+      console.log("정수가 아닙니다.");
+    }
+  });
+    
   if (array.length % 2 === 0) {
     console.log("배열의 길이가 짝수입니다.");
   } else {
@@ -67,11 +68,11 @@ function exampleThree(array, functionOne, functionTwo) {
   //비교한 작은 값은 arrayResult의 원소배열의 0번째
   //큰 값은 arrayResult의 원소배열의 1번째에 넣어준다.
 
-  //한쌍이 아닌 한번에
-  // const sortAsc = array.sort((a, b) => a - b);
-  /* for (let i = 0; i < array.length; i += 2) {
+  //오름차순 정렬후 한쌍이 아닌 한번에 전부
+  /* const sortAsc = array.sort((a, b) => a - b);
+  for (let i = 0; i < array.length; i += 2) {
     arrayResult[i / 2] = [sortAsc[i], sortAsc[i + 1]];
-  }*/
+  } */
   for (let i = 0; i < array.length; i += 2) {
     let val1 = array[i];
     let val2 = array[i + 1];
