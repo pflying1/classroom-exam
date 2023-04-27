@@ -2,6 +2,8 @@
 // 1.npm install inquirer
 // 2. ESM 방식으로만 동작하는 외부 CLI 라이브러리
 
+
+
 import inquirer from "inquirer";
 
 //? inquirer 라이브러리의 .prompt() 메서드는 프로미스를 반환하도록 작성되어 있습니다.
@@ -10,6 +12,7 @@ import inquirer from "inquirer";
 function exampleOne(array) {
   let suffledArray = [];
   // Q.1 랜덤으로 배열의 인덱스를 셔플(섞어) 내는 함수 로직을 작성하세요.
+  suffledArray = array.Math.random()
   //단, 마지막 confirm은 항상 마지막 인덱스여야 합니다.
   return suffledArray;
 }

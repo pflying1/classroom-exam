@@ -36,6 +36,12 @@ let fromJsonData = {
 };
 function exampleOne(basicData, fromJsonData) {
   let value = "";
+  basicData.header = fromJsonData.header;
+  basicData.main = fromJsonData.main;
+  basicData.footer = fromJsonData.footer;
+  for (let i = 0; i < basicData.length; i++) {
+    value = value + basicData[i];
+  }
   //아래의 호출부를 참고하여, 지역변수 value에
   //적정한 문자열 데이터로 객체를 가공하는 코드를 작성한다.
 
@@ -52,44 +58,5 @@ element.innerHTML = exampleOne(basicData, fromJsonData);
 //안정성을 확보한다.
 
 class ExampleTwo {
-  constructor(header, main, footer) {
-    this._header = new Header(header);
-    this._main = new Main(main);
-    this._footer = new Footer(footer);
-  }
-  set header(header) {
-    if (typeof header === "string") {
-      this._header = new Header(header);
-    } else {
-      console.error("Header must be a string.");
-    }
-  }
-
-  set main(main) {
-    if (typeof main === "string") {
-      this._main = new Main(main);
-    } else {
-      console.error("Main must be a string.");
-    }
-  }
-
-  set footer(footer) {
-    if (typeof footer === "string") {
-      this._footer = new Footer(footer);
-    } else {
-      console.error("Footer must be a string.");
-    }
-  }
-
-  get header() {
-    return this._header;
-  }
-
-  get main() {
-    return this._main;
-  }
-
-  get footer() {
-    return this._footer;
-  }
+  constructor() {}
 }
