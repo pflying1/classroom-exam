@@ -7,7 +7,6 @@ function exampleOne(numberValue) {
       callback(new Error("이 함수는 정수가 필요합니다."));
     }
   }
-
   // sequence .2
   function innerOne(one, callback) {
     callback(null, one + 1);
