@@ -24,7 +24,6 @@ function exampleOne(numberValue) {
   function innerFour(four, callback) {
     callback(null, four + 4);
   }
-
   // sequence(시쿼스가) 1 -> 2 -> 3 -> 4 -> 5 형태로 실행되어야 합니다
   // 내부함수 inner 시리즈를 순서대로 실행시켜 리턴된 값을 다음 함수에 인자로 넘겨주는 형태가 아래에 작성되어 있습니다.
   // 작동에는 전혀 이상이 없지만, 아무래도 도출되는 것은 하나의 목적일 뿐인데, 변수가 낭비되는 것 같습니다.
@@ -68,4 +67,4 @@ function exampleOne(numberValue) {
   });
 }
 
-const result = exampleOne(10);
+exampleOne(10);
