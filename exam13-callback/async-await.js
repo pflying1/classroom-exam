@@ -46,25 +46,19 @@ function exampleOne(numberValue) {
   // 배운적 없음 : Q.4 부모 함수를 클래스로 만들고, 인스턴스에 '동적'으로 4개의 inner 함수를 매서드로 추가할 수 있을까요?
 
   // --------호출 부분 -------
-  integerCheck(numberValue)
-    .then(function (data) {
-      return innerOne(data);
-    })
-    .then(function (first) {
-      return innerTwo(first);
-    })
-    .then(function (second) {
-      return innerThree(second);
-    })
-    .then(function (third) {
-      return innerFour(third);
-    })
-    .then(function (fourth) {
-      console.log(fourth);
-    })
-    .catch(function (err) {
+  async function asaw() {
+    try {
+      const data = await integerCheck(numberValue);
+      const first = await innerOne(data);
+      const second = await innerTwo(first);
+      const third = await innerThree(second);
+      const forth = await innerFour(third);
+      console.log(forth);
+    } catch (err) {
       console.log(err);
-    });
+    }
+  }
+  asaw();
 }
 
 exampleOne(10);
