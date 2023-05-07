@@ -1,28 +1,30 @@
-function exampleOne(numberValue) {
+class exampleOne {
+  constructor() {
+    this.numberValue = 0;
+  }
   //sequence .1
   // 매개변수가 정수인지 확인하는 함수 integerCheck()
-  function integerCheck(data) {
+  integerCheck(data) {
     if (Number.isInteger(data) === true) {
       return data;
     } else {
       return new Error("이 함수는 정수가 필요합니다.");
     }
   }
-
   // sequence .2
-  function innerOne(one) {
+  innerOne(one) {
     return one + 1;
   }
   // sequence .3
-  function innerTwo(two) {
+  innerTwo(two) {
     return two + 2;
   }
   // sequence .4
-  function innerThree(three) {
+  innerThree(three) {
     return three + 3;
   }
   // sequence .5
-  function innerFour(four) {
+  innerFour(four) {
     return four + 4;
   }
 
@@ -36,12 +38,6 @@ function exampleOne(numberValue) {
   // 배운적 없음 : Q.4 부모 함수를 클래스로 만들고, 인스턴스에 '동적'으로 4개의 inner 함수를 매서드로 추가할 수 있을까요?
 
   // --------호출 부분 -------
-  integerCheck(numberValue);
-  const first = innerOne(numberValue);
-  const second = innerOne(first);
-  const third = innerOne(second);
-  const fourth = innerOne(third);
-  return fourth;
 }
 
 const result = exampleOne(10);
